@@ -410,7 +410,55 @@ function toggleAllSections(){
 </footer>
 
 <script>
+<script>
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(button => {
+    button.addEventListener("click", function () {
+
+        const panel = this.nextElementSibling;
+
+        // toggle panel visibility
+        panel.classList.toggle("show");
+
+        // update aria-expanded for accessibility
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+
+    });
+});
+
+// Open / Close ALL sections (fixed version)
+function toggleAllSections() {
+
+    const panels = document.querySelectorAll(".panel");
+    const buttons = document.querySelectorAll(".accordion");
+
+    // check if at least one is closed
+    let shouldOpen = false;
+
+    panels.forEach(panel => {
+        if (!panel.classList.contains("show")) {
+            shouldOpen = true;
+        }
+    });
+
+    panels.forEach(panel => {
+        if (shouldOpen) {
+            panel.classList.add("show");
+        } else {
+            panel.classList.remove("show");
+        }
+    });
+
+    buttons.forEach(btn => {
+        btn.setAttribute("aria-expanded", shouldOpen);
+    });
+}
+
+// set footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </script>
 
 </body>
