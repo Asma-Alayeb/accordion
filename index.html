@@ -1,185 +1,246 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html><head>
-//<title>Module X Exploration</title>
-<link rel="stylesheet" href="/content/RtTresources/BasicStylesCCCO.css" type="text/css">
-<link rel="stylesheet" href="https://media.ccconline.org/ccco/2017Master/ExploreMedia/explore.css" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-<script src="https://media.ccconline.org/ccco/2017Master/ExploreMedia/mediaelement/jquery.min.js" type="text/javascript"></script>
-<script src="https://media.ccconline.org/ccco/2017Master/ExploreMedia/ccco_explore.js" type="text/javascript"></script>
-<!--<script src="../../BIO201/ExploreMedia/ccco_explore.js" type="text/javascript"></script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angles - Module Exploration</title>
 
-<script src="https://media.ccconline.org/ccco/2017Master/ExploreMedia/mediaelement/mediaelement-and-player.min.js"></script>
-<link href="https://media.ccconline.org/ccco/2017Master/ExploreMedia/mediaelement/mediaelementplayer.css" rel="stylesheet">
-<style type="text/css">
-    .centerimage{
-        max-width: 600px;
-        width:100%;
-        margin:20px auto;
-        text-align: center;
-        
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+        margin:0;
+        padding:0;
+        color:#333;
     }
-    .centerimage img{
-        width:100%;
-        margin: 10px 0;
-    }
-    .nicebutton{
-        display:inline-block;
-        background:#eee;
-        padding:10px;
-        margin:20px auto;
-        border-radius:10px;
-        color:#444;
-        text-decoration: none;
-        min-height: 105px;
-        max-width: 200px;
-        vertical-align: middle;
-    }
-    .nicebutton:hover{
-        background:#fff;
-    }
-    .nicebutton img{
-        width:100%;
-    }
-    .nicebutton span{
-        display:block;
-        color:#444;
+
+    header{
+        background:#6a0dad;
+        color:white;
+        padding:25px;
         text-align:center;
-        margin-top:5px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.2);
     }
-    .aquestion{
-        background:#eee;
-        margin: 10px;
-        padding:10px;
-        border-radius: 10px;
-    }
-.abutton{
-    max-width: 600px;
-    margin:30px auto;
-    padding:10px;
-    border-radius: 10px;
-    background: #eee;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    min-height:60px;
-}
-.abutton:hover{
-    background:white;
-}
-.abutton .fa{
-    font-size: 60px;
-    float:left;
-}
-.abutton p{
-    margin: 5px 0 5px 70px;
-}
-.abutton h4{
-    margin: 5px 0 5px 70px;
-}
-.abutton a{
-    color:#444;
-    text-decoration: none;
-}
 
-.abutton.nohover{
-    cursor:default;
-}
-.abutton.nohover:hover{
-    background:#eee;
-}
-.abutton.nohover a{
-    color: default;
-    text-decoration: underline;
-}    
-.estimatedtime{
-    float:left;
-    font-size: 13pt;
-    margin: 10px 20px;
-}
+    .container{
+        max-width:1000px;
+        margin:30px auto;
+        padding:20px;
+    }
+
+    .section{
+        background:white;
+        border-radius:12px;
+        margin-bottom:25px;
+        overflow:hidden;
+        box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .section-title{
+        background:#b8860b;
+        color:white;
+        padding:15px 20px;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    .section-content{
+        padding:20px;
+    }
+
+    ul{
+        line-height:1.8;
+    }
+
+    iframe{
+        width:100%;
+        max-width:800px;
+        height:450px;
+        display:block;
+        margin:20px auto;
+        border:none;
+        border-radius:10px;
+    }
+
+    .estimatedtime{
+        font-size:18px;
+        margin-bottom:20px;
+        font-weight:bold;
+    }
+
+    .openall{
+        text-align:right;
+        margin-bottom:20px;
+    }
+
+    .openall button{
+        background:#6a0dad;
+        color:white;
+        border:none;
+        padding:10px 18px;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:15px;
+    }
+
+    .openall button:hover{
+        background:#53108a;
+    }
+
+    footer{
+        text-align:center;
+        background:#6a0dad;
+        color:white;
+        padding:15px;
+        margin-top:40px;
+    }
+
+    .hidden{
+        display:none;
+    }
+
+    .toggle{
+        cursor:pointer;
+    }
 </style>
-</head><body style="max-width: 1000px; margin:auto"><h1>Angles</h1>
-<div class="wrap1200">
-<div class="section_env">
-<p class="estimatedtime">Estimated time:</p>
-<div class="openall"><a href="javascript:openall()">Open All</a></div>
-<div class="section">
-<div class="section-title">Overview</div>
-<div class="section-content">
-<h4>Why Are We Here?</h4>
-<p>This section covers the definition and measurement of angles, including angles in standard position, positive and negative angles, degree and radian measure, coterminal angles, and reference angles. It also introduces the geometric interpretation of angles using the unit circle.&nbsp;</p>
-<p>To complete this lesson, do the following:</p>
-<ul>
-<li>This lesson aligns with <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=9801&amp;type=content&amp;rcode=F34787CC-D1D9-4D47-8DBD-80DC34886FC8-11589516" target="_blank" rel="noopener">OpenStax eText Section 7.1</a> of the course eText: <a href="https://openstax.org/subjects/math. " target="_blank" rel="noopener">OpenStax eText</a></li>
-<li>Download a copy of the notes file to your computer to take notes: &nbsp;<a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=9801&amp;type=content&amp;rcode=F34787CC-D1D9-4D47-8DBD-80DC34886FC8-11589491" target="_blank" rel="noopener">7.1 Notes_Angles</a> &nbsp;or &nbsp;<a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=9801&amp;type=content&amp;rcode=F34787CC-D1D9-4D47-8DBD-80DC34886FC8-11589492" target="_blank" rel="noopener">7.1 Notes_Angles</a></li>
-<li>Fill out the notes as you go through the lecture video in the section below.</li>
-<li>Submit your completed notes to the &nbsp;<a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=9801&amp;type=dropbox&amp;rcode=F34787CC-D1D9-4D47-8DBD-80DC34886FC8-11589755" target="_blank" rel="noopener">Section 7.1 Submission Folder</a></li>
-<li>After you submit your notes, go and complete the related assignments: &nbsp;<a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=9801&amp;type=content&amp;rcode=F34787CC-D1D9-4D47-8DBD-80DC34886FC8-11589760" target="_blank" rel="noopener">Assignments</a><a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=501854&amp;type=content&amp;rcode=c10be8f86b6e4fcaab459291-37" target="_blank" rel="noopener"></a></li>
-</ul>
-<p>All files or folders referenced in this lecture are also linked within this Lesson folder.</p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes- Angles Page 1&nbsp;</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/euz16hHr3sg?si=pjZINDtVURhxrNh2&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes- Angles Page 2</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/8rfnPRjZ584?si=6p3dBn3ggPJDjEZq&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes -Angles Page 3</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <iframe width="560" height="315" src="https://www.youtube.com/embed/6rjWxLZo4Dc?si=Ua4oXiv5NV0c2R7t&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes-Angles Page 4</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <iframe width="560" height="315" src="https://www.youtube.com/embed/bc8uIneVSkE?si=L8U9H1AEaT942Hky&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes- Angles Page 5</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/Sb0RbtYfsjM?si=f0OYlLxp7o6qFbTQ&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes- Angles Page 6</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/nC2T_uj7vA0?si=mNk9_S1B_T8fSp6s&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-</div>
-</div>
-<div class="section">
-<div class="section-title">7.1 Notes- Angles Page 1&nbsp;</div>
-<div class="section-content">
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/euz16hHr3sg?si=pjZINDtVURhxrNh2&amp;wmode=opaque&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></p>
-<p class="attribution"></p>
-</div>
-</div>
-</div>
-<div class="section_env">
-<h3>Additional Sources</h3>
-<p>...can remove if not needed....</p>
-</div>
-<p><script>
-//<![CDATA[
+</head>
 
-$('.abutton').click(function(e){
-    if ($(this).find('.ccaudio').length>0) return;
-    e.preventDefault;
-    var url = $(this).find('a').attr('href');
-    window.open(url);
-})
+<body>
 
-//]]>
-</script></p>
-</div></body></html>
+<header>
+    <h1>Angles</h1>
+    <p>Module X Exploration</p>
+</header>
+
+<div class="container">
+
+    <div class="estimatedtime">
+        Estimated Time: Approximately 2–3 Hours
+    </div>
+
+    <div class="openall">
+        <button onclick="toggleAll()">Open/Close All Sections</button>
+    </div>
+
+    <!-- Overview -->
+    <div class="section">
+        <div class="section-title toggle">Overview</div>
+        <div class="section-content">
+            <h3>Why Are We Here?</h3>
+
+            <p>
+                This section covers the definition and measurement of angles,
+                including angles in standard position, positive and negative angles,
+                degree and radian measure, coterminal angles, and reference angles.
+                It also introduces the geometric interpretation of angles using the unit circle.
+            </p>
+
+            <p>To complete this lesson:</p>
+
+            <ul>
+                <li>Read OpenStax eText Section 7.1</li>
+                <li>Download and complete the guided notes</li>
+                <li>Watch each lecture video carefully</li>
+                <li>Submit completed notes to the submission folder</li>
+                <li>Complete the related assignments</li>
+            </ul>
+
+            <p>
+                All files and resources referenced in this lecture are also linked
+                within the lesson folder.
+            </p>
+        </div>
+    </div>
+
+    <!-- Video Sections -->
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 1</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/euz16hHr3sg"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 2</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/8rfnPRjZ584"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 3</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/6rjWxLZo4Dc"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 4</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/bc8uIneVSkE"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 5</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/Sb0RbtYfsjM"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title toggle">7.1 Notes - Angles Page 6</div>
+        <div class="section-content">
+            <iframe src="https://www.youtube.com/embed/nC2T_uj7vA0"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Additional Sources -->
+    <div class="section">
+        <div class="section-title toggle">Additional Sources</div>
+        <div class="section-content">
+            <p>
+                Additional practice materials, worksheets, and reference videos
+                may be added here if needed.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Angles Module Exploration</p>
+</footer>
+
+<script>
+    // Toggle individual sections
+    const toggles = document.querySelectorAll('.toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            content.classList.toggle('hidden');
+        });
+    });
+
+    // Open/Close all
+    function toggleAll() {
+        const contents = document.querySelectorAll('.section-content');
+
+        contents.forEach(content => {
+            content.classList.toggle('hidden');
+        });
+    }
+</script>
+
+</body>
+</html>
