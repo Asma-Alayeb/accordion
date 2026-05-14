@@ -1,127 +1,452 @@
-<!-- =========================
-VIDEO 7
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angles | Module 7.1</title>
 
-<section class="section">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <button class="accordion" aria-expanded="false">
-        <i class="fa fa-play-circle"></i>
-        7.1 Notes – Angles Page 7
-    </button>
+<style>
 
-    <div class="panel">
+:root{
+    --ccd-purple:#5b2c83;
+    --ccd-purple-light:#7a46a5;
+    --ccd-gold:#c69214;
+    --light-bg:#f6f3fa;
+    --card-bg:#ffffff;
+    --text-dark:#222;
+}
 
-        <h3>Video: Angle Applications</h3>
+*{
+    box-sizing:border-box;
+}
 
-        <p>
-            Add your video description here.
-        </p>
+html{
+    scroll-behavior:smooth;
+}
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Angle Applications"
-                allowfullscreen>
-            </iframe>
-        </div>
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:var(--light-bg);
+    color:var(--text-dark);
+    line-height:1.7;
+}
 
-        <a href="#top" class="top-link">Back to Top</a>
+/* HEADER */
 
+header{
+    background:linear-gradient(135deg,var(--ccd-purple),var(--ccd-purple-light));
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    margin:0;
+    font-size:2.5rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* TOP TOOLS */
+
+.top-tools{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.estimated-time{
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--ccd-purple);
+}
+
+.open-all-btn{
+    background:var(--ccd-purple);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.open-all-btn:hover{
+    background:var(--ccd-purple-light);
+}
+
+/* SECTION CARDS */
+
+.section{
+    background:var(--card-bg);
+    border-radius:18px;
+    margin-bottom:28px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border-left:7px solid var(--ccd-gold);
+}
+
+/* ACCORDION BUTTON */
+
+.accordion{
+    width:100%;
+    background:var(--ccd-purple);
+    color:white;
+    border:none;
+    padding:20px;
+    text-align:left;
+    cursor:pointer;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.accordion:hover,
+.accordion:focus{
+    background:var(--ccd-purple-light);
+}
+
+.accordion i{
+    color:var(--ccd-gold);
+    margin-right:10px;
+}
+
+/* PANEL */
+
+.panel{
+    padding:25px;
+    display:none;
+}
+
+.panel.show{
+    display:block;
+}
+
+.panel h2,
+.panel h3{
+    color:var(--ccd-purple);
+}
+
+/* VIDEO */
+
+.video-container{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%;
+    margin-top:20px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* ACCESSIBILITY NOTE */
+
+.accessibility-note{
+    background:#fff8e6;
+    border-left:6px solid var(--ccd-gold);
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+/* BUTTONS */
+
+.resource-button{
+    display:inline-block;
+    background:var(--ccd-gold);
+    color:white;
+    padding:12px 18px;
+    text-decoration:none;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.resource-button:hover{
+    background:#a67d10;
+}
+
+.top-link{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--ccd-purple);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.top-link:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--ccd-purple);
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+
+    .top-tools{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .accordion{
+        font-size:1rem;
+    }
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<header>
+    <h1>Angles</h1>
+    <p>Module 7.1 Exploration</p>
+</header>
+
+<div class="container">
+
+<div class="top-tools">
+    <div class="estimated-time">
+        <i class="fa fa-clock-o"></i>
+        Estimated Time: 2–3 Hours
     </div>
 
-</section>
+    <button class="open-all-btn" onclick="toggleAllSections()">
+        Open / Close All Sections
+    </button>
+</div>
 
-<!-- =========================
-VIDEO 8
-========================= -->
+<!-- OVERVIEW -->
 
 <section class="section">
+<button class="accordion" aria-expanded="true">
+<i class="fa fa-book"></i> Overview
+</button>
 
-    <button class="accordion" aria-expanded="false">
-        <i class="fa fa-play-circle"></i>
-        7.1 Notes – Angles Page 8
-    </button>
+<div class="panel show">
 
-    <div class="panel">
+<h2>Why Are We Here?</h2>
 
-        <h3>Video: More Practice with Angles</h3>
+<p>
+This lesson covers the definition and measurement of angles,
+including standard position, degree and radian measure,
+coterminal angles, reference angles, and the unit circle.
+</p>
 
-        <p>
-            Add your video description here.
-        </p>
+<div class="accessibility-note">
+<strong>Accessibility Note:</strong>
+Closed captions are available on all lecture videos.
+</div>
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                title="More Practice with Angles"
-                allowfullscreen>
-            </iframe>
-        </div>
+<h3>Learning Objectives</h3>
+<ul>
+<li>Define angles in standard position</li>
+<li>Measure angles in degrees and radians</li>
+<li>Find coterminal angles</li>
+<li>Determine reference angles</li>
+<li>Use the unit circle</li>
+</ul>
 
-        <a href="#top" class="top-link">Back to Top</a>
+<a href="#" class="resource-button">Download Notes</a>
+<br>
+<a href="#top" class="top-link">Back to Top</a>
 
-    </div>
-
+</div>
 </section>
 
-<!-- =========================
-VIDEO 9
-========================= -->
+<!-- VIDEO SECTIONS -->
 
 <section class="section">
-
-    <button class="accordion" aria-expanded="false">
-        <i class="fa fa-play-circle"></i>
-        7.1 Notes – Angles Page 9
-    </button>
-
-    <div class="panel">
-
-        <h3>Video: Advanced Angle Concepts</h3>
-
-        <p>
-            Add your video description here.
-        </p>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Advanced Angle Concepts"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <a href="#top" class="top-link">Back to Top</a>
-
-    </div>
-
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 1</button>
+<div class="panel">
+<h3>Introduction to Angles</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/euz16hHr3sg" title="Introduction to Angles" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
 </section>
-
-<!-- =========================
-VIDEO 10
-========================= -->
 
 <section class="section">
-
-    <button class="accordion" aria-expanded="false">
-        <i class="fa fa-play-circle"></i>
-        7.1 Notes – Angles Page 10
-    </button>
-
-    <div class="panel">
-
-        <h3>Video: Final Review and Summary</h3>
-
-        <p>
-            Add your video description here.
-        </p>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Final Review and Summary"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <a href="#top" class="top-link">Back to Top</a>
-
-    </div>
-
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 2</button>
+<div class="panel">
+<h3>Positive and Negative Angles</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/8rfnPRjZ584" title="Positive and Negative Angles" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
 </section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 3</button>
+<div class="panel">
+<h3>Degree and Radian Measure</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/6rjWxLZo4Dc" title="Degree and Radian Measure" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 4</button>
+<div class="panel">
+<h3>Coterminal Angles</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/bc8uIneVSkE" title="Coterminal Angles" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 5</button>
+<div class="panel">
+<h3>Reference Angles</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/Sb0RbtYfsjM" title="Reference Angles" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 6</button>
+<div class="panel">
+<h3>Unit Circle Applications</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/nC2T_uj7vA0" title="Unit Circle Applications" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 7</button>
+<div class="panel">
+<h3>Add Your Video Title</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 7" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 8</button>
+<div class="panel">
+<h3>Add Your Video Title</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 8" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 9</button>
+<div class="panel">
+<h3>Add Your Video Title</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 9" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+<section class="section">
+<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 10</button>
+<div class="panel">
+<h3>Add Your Video Title</h3>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 10" allowfullscreen></iframe>
+</div>
+<a href="#top" class="top-link">Back to Top</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 CCD Mathematics Course Content
+</footer>
+
+<script>
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(button=>{
+    button.addEventListener("click",function(){
+        const panel=this.nextElementSibling;
+        panel.classList.toggle("show");
+
+        const expanded=this.getAttribute("aria-expanded")==="true";
+        this.setAttribute("aria-expanded", !expanded);
+    });
+});
+
+function toggleAllSections(){
+    const panels=document.querySelectorAll(".panel");
+    const buttons=document.querySelectorAll(".accordion");
+
+    let shouldOpen=false;
+
+    panels.forEach(panel=>{
+        if(!panel.classList.contains("show")){
+            shouldOpen=true;
+        }
+    });
+
+    panels.forEach(panel=>{
+        if(shouldOpen){
+            panel.classList.add("show");
+        }else{
+            panel.classList.remove("show");
+        }
+    });
+
+    buttons.forEach(button=>{
+        button.setAttribute("aria-expanded", shouldOpen);
+    });
+}
+
+</script>
+
+</body>
+</html>
