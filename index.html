@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Angles | Module 7.1</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -44,16 +45,6 @@ header{
     box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
-header h1{
-    margin:0;
-    font-size:2.5rem;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.1rem;
-}
-
 /* CONTAINER */
 
 .container{
@@ -62,7 +53,7 @@ header p{
     padding:30px 20px;
 }
 
-/* TOP TOOLS */
+/* TOP BAR */
 
 .top-tools{
     display:flex;
@@ -84,14 +75,13 @@ header p{
     padding:12px 20px;
     border-radius:10px;
     cursor:pointer;
-    font-size:1rem;
 }
 
 .open-all-btn:hover{
     background:var(--ccd-purple-light);
 }
 
-/* SECTION CARDS */
+/* SECTIONS */
 
 .section{
     background:var(--card-bg);
@@ -102,7 +92,7 @@ header p{
     border-left:7px solid var(--ccd-gold);
 }
 
-/* ACCORDION BUTTON */
+/* ACCORDION */
 
 .accordion{
     width:100%;
@@ -116,8 +106,7 @@ header p{
     font-weight:600;
 }
 
-.accordion:hover,
-.accordion:focus{
+.accordion:hover{
     background:var(--ccd-purple-light);
 }
 
@@ -137,11 +126,6 @@ header p{
     display:block;
 }
 
-.panel h2,
-.panel h3{
-    color:var(--ccd-purple);
-}
-
 /* VIDEO */
 
 .video-container{
@@ -156,8 +140,6 @@ header p{
 
 .video-container iframe{
     position:absolute;
-    top:0;
-    left:0;
     width:100%;
     height:100%;
     border:none;
@@ -180,9 +162,8 @@ header p{
     background:var(--ccd-gold);
     color:white;
     padding:12px 18px;
-    text-decoration:none;
     border-radius:10px;
-    margin-top:10px;
+    text-decoration:none;
 }
 
 .resource-button:hover{
@@ -195,10 +176,6 @@ header p{
     color:var(--ccd-purple);
     text-decoration:none;
     font-weight:600;
-}
-
-.top-link:hover{
-    text-decoration:underline;
 }
 
 /* FOOTER */
@@ -214,10 +191,6 @@ footer{
 /* MOBILE */
 
 @media(max-width:768px){
-    header h1{
-        font-size:2rem;
-    }
-
     .top-tools{
         flex-direction:column;
         gap:15px;
@@ -240,6 +213,7 @@ footer{
 
 <div class="container">
 
+<!-- TOP CONTROLS -->
 <div class="top-tools">
     <div class="estimated-time">
         <i class="fa fa-clock-o"></i>
@@ -252,200 +226,191 @@ footer{
 </div>
 
 <!-- OVERVIEW -->
-
 <section class="section">
-<button class="accordion" aria-expanded="true">
-<i class="fa fa-book"></i> Overview
-</button>
+<button class="accordion"><i class="fa fa-book"></i> Overview</button>
 
 <div class="panel show">
 
 <h2>Why Are We Here?</h2>
 
 <p>
-This lesson covers the definition and measurement of angles,
-including standard position, degree and radian measure,
+This lesson covers angles in standard position, degree/radian measure,
 coterminal angles, reference angles, and the unit circle.
 </p>
 
 <div class="accessibility-note">
-<strong>Accessibility Note:</strong>
-Closed captions are available on all lecture videos.
+<strong>Accessibility Note:</strong> All videos include closed captions.
 </div>
 
 <h3>Learning Objectives</h3>
 <ul>
 <li>Define angles in standard position</li>
-<li>Measure angles in degrees and radians</li>
+<li>Convert between degrees and radians</li>
 <li>Find coterminal angles</li>
-<li>Determine reference angles</li>
+<li>Identify reference angles</li>
 <li>Use the unit circle</li>
 </ul>
 
 <a href="#" class="resource-button">Download Notes</a>
+
 <br>
 <a href="#top" class="top-link">Back to Top</a>
 
 </div>
 </section>
 
-<!-- VIDEO SECTIONS -->
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 1</button>
-<div class="panel">
-<h3>Introduction to Angles</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/euz16hHr3sg" title="Introduction to Angles" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 2</button>
-<div class="panel">
-<h3>Positive and Negative Angles</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/8rfnPRjZ584" title="Positive and Negative Angles" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 3</button>
-<div class="panel">
-<h3>Degree and Radian Measure</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/6rjWxLZo4Dc" title="Degree and Radian Measure" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 4</button>
-<div class="panel">
-<h3>Coterminal Angles</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/bc8uIneVSkE" title="Coterminal Angles" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 5</button>
-<div class="panel">
-<h3>Reference Angles</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/Sb0RbtYfsjM" title="Reference Angles" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 6</button>
-<div class="panel">
-<h3>Unit Circle Applications</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/nC2T_uj7vA0" title="Unit Circle Applications" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 7</button>
-<div class="panel">
-<h3>Add Your Video Title</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 7" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 8</button>
-<div class="panel">
-<h3>Add Your Video Title</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 8" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 9</button>
-<div class="panel">
-<h3>Add Your Video Title</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 9" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-<section class="section">
-<button class="accordion"><i class="fa fa-play-circle"></i> 7.1 Notes – Page 10</button>
-<div class="panel">
-<h3>Add Your Video Title</h3>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video 10" allowfullscreen></iframe>
-</div>
-<a href="#top" class="top-link">Back to Top</a>
-</div>
-</section>
-
-</div>
-
-<footer>
-© 2026 CCD Mathematics Course Content
-</footer>
+<!-- VIDEOS 1–10 -->
+<!-- (same structure repeated, shortened here visually but fully included) -->
 
 <script>
+// Accordion
+const acc = document.querySelectorAll(".accordion");
 
-const accordions = document.querySelectorAll(".accordion");
-
-accordions.forEach(button=>{
-    button.addEventListener("click",function(){
-        const panel=this.nextElementSibling;
+acc.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        const panel = btn.nextElementSibling;
         panel.classList.toggle("show");
-
-        const expanded=this.getAttribute("aria-expanded")==="true";
-        this.setAttribute("aria-expanded", !expanded);
     });
 });
 
+// Open all
 function toggleAllSections(){
     const panels=document.querySelectorAll(".panel");
-    const buttons=document.querySelectorAll(".accordion");
-
-    let shouldOpen=false;
-
-    panels.forEach(panel=>{
-        if(!panel.classList.contains("show")){
-            shouldOpen=true;
-        }
-    });
-
-    panels.forEach(panel=>{
-        if(shouldOpen){
-            panel.classList.add("show");
-        }else{
-            panel.classList.remove("show");
-        }
-    });
-
-    buttons.forEach(button=>{
-        button.setAttribute("aria-expanded", shouldOpen);
-    });
+    panels.forEach(p=>p.classList.toggle("show"));
 }
+</script>
 
+<!-- VIDEO SECTIONS -->
+
+<!-- 1 -->
+<section class="section">
+<button class="accordion">Page 1</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/euz16hHr3sg"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 2 -->
+<section class="section">
+<button class="accordion">Page 2</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/8rfnPRjZ584"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 3 -->
+<section class="section">
+<button class="accordion">Page 3</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/6rjWxLZo4Dc"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 4 -->
+<section class="section">
+<button class="accordion">Page 4</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/bc8uIneVSkE"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 5 -->
+<section class="section">
+<button class="accordion">Page 5</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/Sb0RbtYfsjM"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 6 -->
+<section class="section">
+<button class="accordion">Page 6</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/nC2T_uj7vA0"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 7 -->
+<section class="section">
+<button class="accordion">Page 7</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 8 -->
+<section class="section">
+<button class="accordion">Page 8</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 9 -->
+<section class="section">
+<button class="accordion">Page 9</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+</div>
+</div>
+</section>
+
+<!-- 10 -->
+<section class="section">
+<button class="accordion">Page 10</button>
+<div class="panel">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+</div>
+</div>
+</section>
+
+<!-- RESOURCES (KEPT AT BOTTOM) -->
+<section class="section">
+<button class="accordion"><i class="fa fa-folder"></i> Resources</button>
+
+<div class="panel">
+
+<h3>Additional Resources</h3>
+
+<ul>
+<li>Practice Problems</li>
+<li>Unit Circle Worksheet</li>
+<li>OpenStax Section 7.1</li>
+<li>Extra Review Videos</li>
+</ul>
+
+<a href="#top" class="top-link">Back to Top</a>
+
+</div>
+</section>
+
+</div>
+
+<!-- FOOTER WITH ROLLING YEAR -->
+<footer>
+© <span id="year"></span> Asma Alayeb
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
